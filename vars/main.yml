@@ -1,0 +1,5 @@
+---
+rapidpro_archiver_package_directory_path: "{{ rapidpro_archiver_package_directory_root }}/{{ rapidpro_archiver_package_directory_name }}"
+rapidpro_archiver_binary_name: "rp-archiver"
+rapidpro_archiver_archive_messages_command: "./{{ rapidpro_archiver_binary_name }} -archive-messages{% if rapidpro_archiver_delete %} -delete{% endif %}"
+rapidpro_archiver_archive_runs_command: "./{{ rapidpro_archiver_binary_name }} -archive-runs{% if rapidpro_archiver_delete %} -delete{% endif %}"

@@ -1,0 +1,10 @@
+---
+- name: Install RapidPro Archiver
+  include_tasks: install.yml
+
+- name: Configure RapidPro Archiver
+  include_tasks: configure.yml
+
+- name: Archive old messages and runs
+  include_tasks: archive.yml
+  when: rapidpro_rchiver_archive_messages or rapidpro_archiver_archive_runs

@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  role_name: rapidpro_archiver
+  author: Ona Engineering
+  description: Installs and configures RapidPro Archiver, a simple service for archiving old RapidPro messages and runs and write archives to an S3 compatible endpoint.
+  company: Ona Systems Inc
+  license: Apache v2.0
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 16.04
+        - 18.04
+  galaxy_tags:
+    - rapidpro
+
+dependencies: []

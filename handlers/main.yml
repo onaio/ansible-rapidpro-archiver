@@ -1,0 +1,7 @@
+---
+- name: restart rapidpro-archiver
+  systemd:
+    name: "{{ rapidpro_archiver_service_name }}"
+    state: restarted
+    enabled: true
+    daemon_reload: true

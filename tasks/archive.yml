@@ -1,0 +1,12 @@
+---
+- name: Archive messages
+  command: "{{ rapidpro_archiver_archive_messages_command }}"
+  args:
+    chdir: "{{ rapidpro_archiver_active_package_symlink }}"
+  when: rapidpro_rchiver_archive_messages
+
+- name: Archive runs
+  command: "{{ rapidpro_archiver_archive_runs_command }}"
+  args:
+    chdir: "{{ rapidpro_archiver_active_package_symlink }}"
+  when: rapidpro_archiver_archive_runs
