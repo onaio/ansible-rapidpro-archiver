@@ -32,7 +32,7 @@ rapidpro_archiver_log_level: "info"
 rapidpro_archiver_config_template: "rapidpro_archiver_active_package_symlink/archiver.toml.j2"
 # Environment variables to be used by the RapidPro Archiver service
 rapidpro_archiver_environment_vars: {}
-rapidpro_rchiver_archive_messages: true
+rapidpro_archiver_archive_messages: true
 rapidpro_archiver_archive_runs: true
 rapidpro_archiver_aws_access_key_id:
 rapidpro_archiver_aws_secret_access_key:

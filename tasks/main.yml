@@ -7,4 +7,4 @@
 
 - name: Archive old messages and runs
   include_tasks: archive.yml
-  when: rapidpro_rchiver_archive_messages or rapidpro_archiver_archive_runs
+  when: rapidpro_archiver_archive_messages or rapidpro_archiver_archive_runs
