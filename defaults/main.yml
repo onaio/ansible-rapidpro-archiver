@@ -31,8 +31,6 @@ rapidpro_archiver_exit_on_completion: false
 rapidpro_archiver_keep_files: false
 rapidpro_archiver_log_level: "info"
 rapidpro_archiver_config_template: "rapidpro_archiver_active_package_symlink/archiver.toml.j2"
-# Environment variables to be used by the RapidPro Archiver service
-rapidpro_archiver_environment_vars: {}
 rapidpro_archiver_archive_messages: true
 rapidpro_archiver_archive_runs: true
 rapidpro_archiver_aws_access_key_id:
@@ -44,4 +42,25 @@ rapidpro_archiver_s3_force_path_style:
 rapidpro_archiver_s3_region:
 rapidpro_archiver_upload_to_s3: true
 rapidpro_archiver_temp_dir: "/tmp"
-rapidpro_archiver_start_time: "00"
+rapidpro_archiver_start_time: "00:01"
+# Environment variables to be used by the RapidPro Archiver service
+rapidpro_archiver_environment_vars:
+  ARCHIVER_ARCHIVE_MESSAGES: "{{ rapidpro_archiver_archive_messages }}"
+  ARCHIVER_ARCHIVE_RUNS: "{{ rapidpro_archiver_archive_runs }}"
+  ARCHIVER_AWS_ACCESS_KEY_ID: "{{ rapidpro_archiver_aws_access_key_id }}"
+  ARCHIVER_AWS_SECRET_ACCESS_KEY: "{{ rapidpro_archiver_aws_secret_access_key }}"
+  ARCHIVER_DB: "{{ rapidpro_archiver_postgresql_url }}"
+  ARCHIVER_DELETE: "{{ rapidpro_archiver_delete }}"
+  ARCHIVER_EXIT_ON_COMPLETION: "{{ rapidpro_archiver_exit_on_completion }}"
+  ARCHIVER_KEEP_FILES: "{{ rapidpro_archiver_keep_files }}"
+  ARCHIVER_LOG_LEVEL: "{{ rapidpro_archiver_log_level }}"
+  ARCHIVER_RETENTION_PERIOD: "{{ rapidpro_archiver_retention_period }}"
+  ARCHIVER_S3_BUCKET: "{{ rapidpro_archiver_s3_bucket }}"
+  ARCHIVER_S3_DISABLE_SSL: "{{ rapidpro_archiver_s3_disable_ssl }}"
+  ARCHIVER_S3_ENDPOINT: "{{ rapidpro_archiver_s3_endpoint }}"
+  ARCHIVER_S3_FORCE_PATH_STYLE: "{{ rapidpro_archiver_s3_force_path_style }}"
+  ARCHIVER_S3_REGION: "{{ rapidpro_archiver_s3_region }}"
+  ARCHIVER_SENTRY_DSN: "{{ rapidpro_archiver_sentry_dsn }}"
+  ARCHIVER_START_TIME: "{{ rapidpro_archiver_start_time}}"
+  ARCHIVER_TEMP_DIR: "{{ rapidpro_archiver_temp_dir }}"
+  ARCHIVER_UPLOAD_TO_S3: "{{ rapidpro_archiver_upload_to_s3 }}"
