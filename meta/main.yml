@@ -5,12 +5,13 @@ galaxy_info:
   description: Installs and configures RapidPro Archiver
   company: Ona Systems Inc
   license: Apache v2.0
-  min_ansible_version: 1.2
+  min_ansible_version: "1.2"
   platforms:
     - name: Ubuntu
       versions:
-        - 16.04
-        - 18.04
+        - xenial
+        - bionic
+        - focal
   galaxy_tags:
     - rapidpro
 

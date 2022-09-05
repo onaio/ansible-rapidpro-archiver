@@ -61,6 +61,6 @@ rapidpro_archiver_environment_vars:
   ARCHIVER_S3_FORCE_PATH_STYLE: "{{ rapidpro_archiver_s3_force_path_style }}"
   ARCHIVER_S3_REGION: "{{ rapidpro_archiver_s3_region }}"
   ARCHIVER_SENTRY_DSN: "{{ rapidpro_archiver_sentry_dsn }}"
-  ARCHIVER_START_TIME: "{{ rapidpro_archiver_start_time}}"
+  ARCHIVER_START_TIME: "{{ rapidpro_archiver_start_time }}"
   ARCHIVER_TEMP_DIR: "{{ rapidpro_archiver_temp_dir }}"
   ARCHIVER_UPLOAD_TO_S3: "{{ rapidpro_archiver_upload_to_s3 }}"

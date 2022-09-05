@@ -23,5 +23,8 @@
   template:
     src: "etc/systemd/system/rapidpro_archiver_service_name.service.j2"
     dest: "/etc/systemd/system/{{ rapidpro_archiver_service_name }}.service"
+    owner: root
+    group: root
+    mode: 0644
   notify:
     - restart rapidpro-archiver
