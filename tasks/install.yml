@@ -38,4 +38,4 @@
     group: "{{ rapidpro_archiver_system_group }}"
     follow: false
   notify:
-    - restart rapidpro-archiver
+    - Restart rapidpro-archiver

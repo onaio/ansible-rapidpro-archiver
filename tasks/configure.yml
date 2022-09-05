@@ -7,7 +7,7 @@
     group: "{{ rapidpro_archiver_system_group }}"
     mode: 0750
   notify:
-    - restart rapidpro-archiver
+    - Restart rapidpro-archiver
 
 - name: Copy the RapidPro Archiver environment file
   template:
@@ -17,7 +17,7 @@
     group: "{{ rapidpro_archiver_system_group }}"
     mode: 0750
   notify:
-    - restart rapidpro-archiver
+    - Restart rapidpro-archiver
 
 - name: Copy the RapidPro Archiver systemd unit file
   template:
@@ -27,4 +27,4 @@
     group: root
     mode: 0644
   notify:
-    - restart rapidpro-archiver
+    - Restart rapidpro-archiver
