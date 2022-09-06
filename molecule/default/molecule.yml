@@ -5,10 +5,15 @@ driver:
   name: docker
 platforms:
   - name: ansible-rapidpro-archiver-ubuntu-18.04
-    image: solita/ubuntu-systemd:18.04
+    image: travisci/ubuntu-systemd:18.04
     dockerfile: Dockerfile.j2
     privileged: true
-    command: /sbin/init
+    command: /lib/systemd/systemd
+  - name: ansible-rapidpro-archiver-ubuntu-20.04
+    image: travisci/ubuntu-systemd:20.04
+    dockerfile: Dockerfile.j2
+    privileged: true
+    command: /lib/systemd/systemd
 provisioner:
   name: ansible
 lint: |

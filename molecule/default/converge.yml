@@ -5,3 +5,6 @@
     - name: "Include role"
       include_role:
         name: "ansible-rapidpro-archiver"
+      vars:
+        rapidpro_archiver_archive_messages: false
+        rapidpro_archiver_archive_runs: false

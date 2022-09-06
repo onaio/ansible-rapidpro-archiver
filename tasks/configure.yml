@@ -1,14 +1,4 @@
 ---
-- name: Copy the RapidPro Archiver config file
-  template:
-    src: "{{ rapidpro_archiver_config_template }}"
-    dest: "{{ rapidpro_archiver_active_package_symlink }}/archiver.toml"
-    owner: "{{ rapidpro_archiver_system_user }}"
-    group: "{{ rapidpro_archiver_system_group }}"
-    mode: 0750
-  notify:
-    - restart rapidpro-archiver
-
 - name: Copy the RapidPro Archiver environment file
   template:
     src: "rapidpro_archiver_active_package_symlink/environment.j2"
@@ -17,11 +7,14 @@
     group: "{{ rapidpro_archiver_system_group }}"
     mode: 0750
   notify:
-    - restart rapidpro-archiver
+    - Restart rapidpro-archiver
 
 - name: Copy the RapidPro Archiver systemd unit file
   template:
     src: "etc/systemd/system/rapidpro_archiver_service_name.service.j2"
     dest: "/etc/systemd/system/{{ rapidpro_archiver_service_name }}.service"
+    owner: root
+    group: root
+    mode: 0644
   notify:
-    - restart rapidpro-archiver
+    - Restart rapidpro-archiver

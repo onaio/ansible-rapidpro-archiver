@@ -1,5 +1,5 @@
 ---
-- name: restart rapidpro-archiver
+- name: Restart rapidpro-archiver
   systemd:
     name: "{{ rapidpro_archiver_service_name }}"
     state: restarted
