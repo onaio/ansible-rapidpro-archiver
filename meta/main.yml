@@ -3,6 +3,7 @@ galaxy_info:
   role_name: rapidpro_archiver
   author: Ona Engineering
   description: Installs and configures RapidPro Archiver
+  namespace: onaio
   company: Ona Systems Inc
   license: Apache v2.0
   min_ansible_version: "1.2"

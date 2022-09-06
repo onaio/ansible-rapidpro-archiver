@@ -30,7 +30,6 @@ rapidpro_archiver_delete: true
 rapidpro_archiver_exit_on_completion: false
 rapidpro_archiver_keep_files: false
 rapidpro_archiver_log_level: "info"
-rapidpro_archiver_config_template: "rapidpro_archiver_active_package_symlink/archiver.toml.j2"
 rapidpro_archiver_archive_messages: true
 rapidpro_archiver_archive_runs: true
 rapidpro_archiver_aws_access_key_id:
